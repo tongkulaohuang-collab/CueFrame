@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary", "picks"],
+  "properties": {
+    "summary": {"type": "string", "minLength": 1, "maxLength": 600},
+    "picks": {
+      "type": "array", "maxItems": 5,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["index", "reason"],
+        "properties": {
+          "index": {"type": "integer", "minimum": 0},
+          "reason": {"type": "string", "minLength": 1, "maxLength": 300}
+        }
+      }
+    }
+  }
+}

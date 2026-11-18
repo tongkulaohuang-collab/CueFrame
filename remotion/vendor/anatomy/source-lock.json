@@ -1,0 +1,10 @@
+{
+  "upstream": "https://github.com/wheresryan22/anatomy",
+  "checkedAt": "2026-11-06",
+  "lock": "Per-file SHA256 from verified audit snapshot; not a commit pin",
+  "files": {
+    "kit/iso-kit.mjs": "6d3ecc725d30c3b0346da309cf61dfa5a65017c23620bbd4093009d4fb104018",
+    "scripts/inline-kit.mjs": "01e08df7c2556ce52a7e8ed9009a332036b209ab7e42389874af2a65fda6e9db",
+    "LICENSE": "87c078ab9d90a3044f359e6b563d4e6afea7aa060897cf4f21618687b3856796"
+  }
+}

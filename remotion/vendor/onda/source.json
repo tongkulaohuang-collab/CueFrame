@@ -1,0 +1,29 @@
+{
+  "revision": "main snapshot pinned by SHA256",
+  "upstream": "https://github.com/degueba/onda",
+  "modification": "Unmodified upstream helpers; Frameboard adapter lives in video/LibraryEffects.jsx",
+  "files": [
+    {
+      "source": "https://raw.githubusercontent.com/degueba/onda/main/lib/choreography.ts",
+      "sha256": "38865bccc6e3a014c3887a5d90dd8073031f5aca4e802e02c10af1d2912aceb3",
+      "file": "choreography.ts"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/degueba/onda/main/lib/motion.ts",
+      "sha256": "f7d64d068ae3615b7d1513b18332baf5362b6d552dd3b34b8527c0ba04b75a6a",
+      "file": "motion.ts"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/degueba/onda/main/lib/easing.ts",
+      "sha256": "63910c59134eb953264b6885afcda4499e50e204987c1121fd3c291493058aab",
+      "file": "easing.ts"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/degueba/onda/main/LICENSE",
+      "sha256": "14e3fb4f73fcb5992c741492d92b98685e5dd0fd9511262b658239bb9e89ceb3",
+      "file": "LICENSE"
+    }
+  ],
+  "snapshot": "2026-11-10",
+  "license": "MIT"
+}

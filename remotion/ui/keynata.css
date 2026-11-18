@@ -1,0 +1,25 @@
+.keynata{min-width:0;border:1px solid var(--line);background:var(--canvas);border-radius:12px;padding:18px;margin:12px 0 20px;scroll-margin-top:18px}
+.kn-heading,.kn-results,.kn-paging,.kn-use{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.kn-heading{color:var(--accent)}.keynata .kn-heading h3{margin:0;color:var(--ink)}
+.kn-count{font-size:13px;color:var(--accent);background:var(--accent-soft);padding:2px 9px;border-radius:12px}
+.keynata .kn-intro,.kn-results,.kn-player span,.kn-paging,.kn-selected{color:var(--muted)}
+.kn-intro a{color:var(--accent);margin-left:8px}
+.kn-filters{display:grid;grid-template-columns:minmax(120px,1.6fr) repeat(2,minmax(105px,1fr));gap:12px}
+.kn-filters .field{min-width:0;margin:0}.kn-filters input,.kn-filters select{width:100%}
+.kn-results{justify-content:space-between;min-height:44px;font-size:13px}
+.kn-reset{color:var(--accent);padding:4px 9px}
+.kn-tracks{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kn-tracks li+li{border-top:1px solid var(--line)}
+.kn-tracks .kn-track{width:100%;min-height:44px;display:grid;grid-template-columns:18px minmax(0,1fr) 75px 46px;align-items:center;gap:10px;text-align:left;border:0;border-radius:0;padding:7px 12px;background:var(--surface);line-height:1.3}
+.kn-tracks .kn-track:hover{background:var(--surface-hover)}
+.kn-tracks .kn-current{background:var(--accent-soft);color:var(--accent);box-shadow:inset 3px 0 var(--accent)}
+.kn-track:focus-visible,.kn-paging button:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.kn-track small{display:inline-block;margin-left:8px;color:var(--success)}
+.kn-bpm,.kn-track time,.kn-paging{font-size:13px;font-variant-numeric:tabular-nums}
+.kn-bpm,.kn-track time{text-align:right;color:var(--muted)}
+.kn-paging{justify-content:flex-end;margin:8px 0}.kn-paging button{display:grid;place-items:center;min-width:40px;min-height:36px;padding:5px}
+.kn-player:not([hidden]){display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px 16px;background:var(--surface-raised);padding:12px;border-radius:10px;margin-top:10px}
+.kn-player>div:first-child{grid-column:1/-1}.kn-player audio{width:100%;height:40px;min-width:0}
+.keynata .kn-selected{margin:10px 0 0}
+@media(max-width:780px){.kn-filters{grid-template-columns:1fr 1fr}.kn-filters>label:first-child{grid-column:1/-1}.kn-player:not([hidden]){grid-template-columns:1fr}}
+@media(max-width:450px){.keynata{padding:12px}.kn-tracks .kn-track{grid-template-columns:15px minmax(0,1fr) 56px 36px;gap:5px;padding:8px}.kn-bpm{font-size:12px}}

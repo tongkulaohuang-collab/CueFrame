@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "direction": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "subject": {"type": "string"}, "path": {"type": "string"},
+        "camera": {"type": "string"}, "handoff": {"type": "string"},
+        "labels": {"type": "string"}
+      },
+      "required": ["subject", "path", "camera", "handoff", "labels"]
+    },
+    "duration": {"type": "number", "minimum": 1, "maximum": 60},
+    "svg": {"type": "string"},
+    "note": {"type": "string"}
+  },
+  "required": ["direction", "duration", "svg", "note"]
+}

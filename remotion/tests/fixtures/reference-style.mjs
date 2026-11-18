@@ -1,0 +1,1 @@
+export const referenceAppearanceFixture=()=>({version:1,name:'深蓝与青色 · 测试参考',background:'#101827',foreground:'#eef6ff',muted:'#53647a',colors:['#55e0c1','#ffbd69','#a99dff'],font:'sans',titleScale:1.35,labelScale:1,stroke:1.8,start:.12,settle:.66,basis:'自编测试参考参数，用于验证参考优先级，不声称分析了真实视频。'});

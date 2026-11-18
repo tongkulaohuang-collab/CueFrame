@@ -1,0 +1,4 @@
+interface:
+  display_name: "图片、文字与图形动效"
+  short_description: "编排图片、文字和图形的出现、转换、强调与消失，统一素材和时机，并检查真实渲染"
+  default_prompt: "使用 $motion-performance-director 改善图片、文字与图形动效，先确定信息变化与实际语音时机，再检查素材、编排和渲染是否一致。"

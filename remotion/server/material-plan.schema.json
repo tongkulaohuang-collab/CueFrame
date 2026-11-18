@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary", "items"],
+  "properties": {
+    "summary": {"type":"string"},
+    "items": {
+      "type":"array", "maxItems":8,
+      "items": {
+        "type":"object", "additionalProperties":false,
+        "required":["title","reason","usage","checks","mode","priority","prompt","shotIds","claimIds","assetIds","imageTargets"],
+        "properties":{
+          "title":{"type":"string"}, "reason":{"type":"string"}, "usage":{"type":"string"}, "checks":{"type":"string"},
+          "mode":{"type":"string","enum":["reuse","generate","source","procedural"]},
+          "priority":{"type":"string","enum":["required","recommended","optional"]},
+          "prompt":{"type":"string"},
+          "shotIds":{"type":"array","items":{"type":"string"}}, "claimIds":{"type":"array","items":{"type":"string"}},
+          "assetIds":{"type":"array","items":{"type":"string"}},
+          "imageTargets":{"type":"array","items":{"type":"object","additionalProperties":false,
+            "required":["shotId","nodeId","label","time","styleMatch"],
+            "properties":{"shotId":{"type":"string"},"nodeId":{"type":"string"},"label":{"type":"string"},"time":{"type":"number"},"styleMatch":{"type":"string"}}
+          }}
+        }
+      }
+    }
+  }
+}

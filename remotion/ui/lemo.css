@@ -1,0 +1,20 @@
+.lemo-library h2,.lemo-preview h2,.lemo-preview h3{margin:6px 0}
+.lemo-selection,.lemo-actions,.lemo-preview header,.lemo-library nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.lemo-selection{padding:12px 16px;background:var(--surface-raised);border-radius:12px;margin:16px 0}
+.lemo-selection div,.lemo-preview header div{margin-right:auto}
+.lemo-selection b,.lemo-card-body span,.lemo-card-body strong{display:block}
+.lemo-filters{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:12px}
+.lemo-filters label{display:grid;gap:6px}
+.lemo-count,.lemo-credit,.lemo-card-body>span{color:var(--muted);font-size:.85rem}
+.lemo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,205px),1fr));gap:12px}
+button.lemo-card{display:flex;flex-direction:column;align-items:stretch;overflow:hidden;text-align:left;padding:0;min-width:0;background:var(--surface-raised)}
+.lemo-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.lemo-card.adopted{border-color:var(--accent)}
+.lemo-card-body{display:block;padding:10px 14px 12px;line-height:1.5}
+.lemo-card-body .lemo-play,.lemo-preview a,.lemo-credit a{color:var(--accent)}
+.lemo-library nav{justify-content:flex-end;margin:12px 0}
+.lemo-preview{width:min(760px,94vw);max-height:calc(100dvh - 32px);overflow:auto;padding:20px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:16px}
+.lemo-preview::backdrop{background:rgba(0,0,0,.72)}
+.lemo-preview video{display:block;width:100%;max-height:54dvh;aspect-ratio:16/9;object-fit:contain;background:#08080b;margin:12px 0;border-radius:8px}
+.lemo-actions button{margin-left:auto}
+@media(max-width:600px){.lemo-filters{grid-template-columns:1fr}.lemo-preview{padding:14px}}

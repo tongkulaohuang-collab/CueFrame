@@ -1,0 +1,153 @@
+{
+  "type": "object",
+  "properties": {
+    "complete": {
+      "type": "boolean"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "string"
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "number"
+          },
+          "until": {
+            "type": "number"
+          },
+          "motion": {
+            "type": "string"
+          },
+          "rhythm": {
+            "type": "string"
+          },
+          "camera": {
+            "type": "string"
+          },
+          "transition": {
+            "type": "string"
+          },
+          "typography": {
+            "type": "string"
+          },
+          "effectIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "customMotion": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "observed",
+              "inferred",
+              "uncertain"
+            ]
+          }
+        },
+        "required": [
+          "from",
+          "until",
+          "motion",
+          "rhythm",
+          "camera",
+          "transition",
+          "typography",
+          "effectIds",
+          "customMotion",
+          "confidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "appearance": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "background": {
+          "type": "string"
+        },
+        "foreground": {
+          "type": "string"
+        },
+        "muted": {
+          "type": "string"
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "font": {
+          "type": "string",
+          "enum": [
+            "sans",
+            "serif",
+            "mono",
+            "display"
+          ]
+        },
+        "titleScale": {
+          "type": "number"
+        },
+        "labelScale": {
+          "type": "number"
+        },
+        "stroke": {
+          "type": "number"
+        },
+        "start": {
+          "type": "number"
+        },
+        "settle": {
+          "type": "number"
+        },
+        "basis": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "name",
+        "background",
+        "foreground",
+        "muted",
+        "colors",
+        "font",
+        "titleScale",
+        "labelScale",
+        "stroke",
+        "start",
+        "settle",
+        "basis"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "complete",
+    "summary",
+    "limitations",
+    "segments",
+    "appearance"
+  ],
+  "additionalProperties": false
+}

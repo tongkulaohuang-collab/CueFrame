@@ -1,0 +1,318 @@
+{
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "libraryVersion": {
+      "type": "integer"
+    },
+    "referenceApplications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "referenceId": {
+            "type": "string"
+          },
+          "from": {
+            "type": "number"
+          },
+          "until": {
+            "type": "number"
+          },
+          "scriptFrom": {
+            "type": "number"
+          },
+          "scriptUntil": {
+            "type": "number"
+          },
+          "effectIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "customMotion": {
+            "type": "string"
+          },
+          "adaptation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "referenceId",
+          "from",
+          "until",
+          "scriptFrom",
+          "scriptUntil",
+          "effectIds",
+          "customMotion",
+          "adaptation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "explanationBeats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "shotId": {
+            "type": "string"
+          },
+          "from": {
+            "type": "number"
+          },
+          "until": {
+            "type": "number"
+          },
+          "cueIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "intent": {
+            "type": "string",
+            "enum": [
+              "establish",
+              "change",
+              "compare",
+              "result",
+              "hold",
+              "reveal",
+              "replace"
+            ]
+          },
+          "entities": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 12,
+            "items": {
+              "type": "string"
+            }
+          },
+          "before": {
+            "type": "string"
+          },
+          "after": {
+            "type": "string"
+          },
+          "dependsOn": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "holdReason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "shotId",
+          "from",
+          "until",
+          "cueIds",
+          "intent",
+          "entities",
+          "before",
+          "after",
+          "dependsOn",
+          "holdReason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "performanceRequirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "shotId": {
+            "type": "string"
+          },
+          "actionId": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "rigid",
+              "hold",
+              "state",
+              "articulated",
+              "locomotion",
+              "contact",
+              "hinge"
+            ]
+          },
+          "actorId": {
+            "type": "string"
+          },
+          "partIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cueId": {
+            "type": "string"
+          },
+          "from": {
+            "type": "number"
+          },
+          "until": {
+            "type": "number"
+          },
+          "dependsOn": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "shotId",
+          "actionId",
+          "kind",
+          "actorId",
+          "partIds",
+          "cueId",
+          "from",
+          "until",
+          "dependsOn",
+          "note"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "referenceDecisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "referenceId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "applied",
+              "not_applicable"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "referenceId",
+          "status",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "visualStyle": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "integer",
+              "enum": [
+                1
+              ]
+            },
+            "name": {
+              "type": "string"
+            },
+            "background": {
+              "type": "string"
+            },
+            "foreground": {
+              "type": "string"
+            },
+            "muted": {
+              "type": "string"
+            },
+            "colors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "font": {
+              "type": "string",
+              "enum": [
+                "sans",
+                "serif",
+                "mono",
+                "display"
+              ]
+            },
+            "titleScale": {
+              "type": "number"
+            },
+            "labelScale": {
+              "type": "number"
+            },
+            "stroke": {
+              "type": "number"
+            },
+            "start": {
+              "type": "number"
+            },
+            "settle": {
+              "type": "number"
+            },
+            "basis": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "version",
+            "name",
+            "background",
+            "foreground",
+            "muted",
+            "colors",
+            "font",
+            "titleScale",
+            "labelScale",
+            "stroke",
+            "start",
+            "settle",
+            "basis"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "text",
+    "libraryVersion",
+    "referenceApplications",
+    "explanationBeats",
+    "performanceRequirements",
+    "referenceDecisions",
+    "visualStyle"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,139 @@
+.science-tools { max-width: 1320px; margin: auto; padding: 32px 40px 72px; }
+.science-tools button, .science-actions a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
+.science-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin: 30px 0 24px; }
+.science-heading h1 { font-size: 34px; margin: 4px 0 8px; }
+.science-heading p, .science-card p, .science-flow-grid p { color: var(--muted); }
+.science-kicker { font-size: 12px; letter-spacing: .16em; }
+.science-engines { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.science-card { padding: 26px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; min-width: 0; }
+.science-card h2 { font-size: 26px; margin: 20px 0 8px; }
+.science-card-top { display: flex; justify-content: space-between; align-items: center; color: var(--accent); }
+.science-card-top span { font-size: 13px; }
+.science-state { display: flex; align-items: center; gap: 8px; padding: 12px 0; }
+.science-state.ready { color: var(--success); }
+.science-state.pending { color: var(--warning); }
+.science-check-detail { font-size: 13px; overflow-wrap: anywhere; }
+.science-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 12px; }
+.science-actions a { color: var(--accent); }
+.science-notice { margin: 24px 0; padding: 20px 24px; background: var(--surface-raised); border: 1px solid var(--line); border-radius: 12px; }
+.science-notice.error { border-color: var(--warning); }
+.science-notice p { margin: 8px 0; color: var(--muted); }
+.science-notice code { display: block; overflow-wrap: anywhere; color: var(--ink); font-size: 13px; }
+.science-workflow, .science-results { margin-top: 42px; }
+.science-flow-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.science-flow-grid article { border-top: 1px solid var(--line); padding-top: 18px; }
+.science-flow-grid span { font-size: 12px; color: var(--accent); }
+.science-empty { padding: 32px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); }
+.science-job { border-left: 3px solid var(--accent); padding: 8px 16px; overflow-wrap: anywhere; }
+.science-output-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.science-output-grid video, .science-output-grid img { width: 100%; aspect-ratio: 16/9; object-fit: contain; background: #000; border-radius: 8px; margin-bottom: 16px; }
+.science-output-grid p { overflow-wrap: anywhere; font-size: 12px; }
+.director-checks { margin: 20px 0; padding: 20px; border: 1px solid var(--line); border-radius: 12px; }
+.director-checks h3 { margin: 0 0 12px; }
+.director-checks fieldset { min-width: 0; border: 0; padding: 0; margin: 20px 0; }
+.director-checks legend { padding: 0 0 10px; font-weight: 600; }
+.director-check { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; min-height: 44px; cursor: pointer; }
+.director-check input { flex: 0 0 20px; width: 20px; height: 20px; margin: 3px 0; accent-color: var(--accent); }
+.director-check span { display: block; min-width: 0; overflow-wrap: anywhere; }
+.director-check b { display: block; margin-bottom: 4px; }
+.director-check small { display: block; color: var(--warning); margin-top: 6px; }
+.director-checks details p { overflow-wrap: anywhere; }
+.director-checks :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+@media(max-width:760px) {
+  .science-tools { padding: 24px 18px 48px; }
+  .science-heading { flex-direction: column; align-items: flex-start; }
+  .science-engines, .science-flow-grid, .science-output-grid { grid-template-columns: 1fr; }
+  .science-card { padding: 22px; }
+  .top-meta .local { display: none; }
+}
+
+.reference-analysis{margin:12px 0;overflow-wrap:anywhere}.reference-analysis summary{padding:12px 0;cursor:pointer}.reference-analysis article{padding:12px 0;border-top:1px solid var(--line,#293744)}.reference-analysis article p{margin:8px 0;line-height:1.65}
+
+.science-step-problem {
+  margin-left: auto;
+  padding: 2px 7px;
+  border: 1px solid #8d6454;
+  border-radius: 5px;
+  color: #ffd2b8;
+  background: #392a28;
+  white-space: nowrap;
+  font-size: .75rem;
+}
+.science-step-issues, .reference-problem {
+  margin: 14px 0;
+  padding: 14px 18px;
+  border: 1px solid #72534b;
+  border-left: 3px solid #e5aa86;
+  border-radius: 8px;
+  background: #282225;
+  color: #f5e7df;
+  overflow-wrap: anywhere;
+}
+.science-step-issues h2 { margin: 0 0 8px; font-size: 1.05rem; }
+.science-step-issues article + article { margin-top: 12px; border-top: 1px solid #594745; padding-top: 12px; }
+.science-step-issues p, .reference-problem p { margin: 5px 0; line-height: 1.6; }
+.science-step-issues small, .reference-problem small { color: #d8bdb0; }
+.science-step-issues article button { display: block; margin-top: 8px; }
+.reference-problem .reference-analysis { margin-bottom: 0; }
+.task-receipt { overflow-wrap: anywhere; }
+.task-receipt small { display: block; }
+.task-receipt.has-problem { color: #ffd2b8; }
+.reference-block { margin: 12px 0; }
+#reference-analysis { scroll-margin-top: 12px; }
+.ref-review-list { margin: 20px 0; }
+.ref-review-list > header, .ref-review-heading, .ref-player-tools, .ref-review-actions { display:flex; align-items:center; flex-wrap:wrap; gap:10px; }
+.ref-review-list > header, .ref-review-heading { justify-content:space-between; }
+.ref-review-list h3, .ref-review-list h4 { margin:0; overflow-wrap:anywhere; }
+.ref-review-list > header span, .ref-review-time b, .ref-player-tools a { color:var(--muted); }
+.ref-review-list article { border:1px solid var(--line); border-radius:12px; background:var(--canvas); padding:16px; margin-top:12px; }
+.ref-review-time { font-variant-numeric:tabular-nums; }
+.ref-review-time b { font-weight:500; margin-right:6px; }
+.ref-review-status { color:var(--warning); }
+.ref-review-status[data-state="approved"] { color:var(--success); }
+.ref-review-status[data-state="excluded"] { color:var(--muted); }
+.ref-review-body { display:grid; grid-template-columns:minmax(0, 1.35fr) minmax(0, 1fr); gap:18px; align-items:start; }
+.ref-review-player video { display:block; width:100%; aspect-ratio:16/9; background:#09090b; border-radius:8px; object-fit:contain; }
+.ref-player-tools { margin-top:6px; }
+.ref-review-actions { margin-top:16px; }
+.ref-review-list button, .ref-player-tools a { min-height:44px; }
+.ref-player-tools a { display:inline-flex; align-items:center; }
+.ref-review-actions button:first-child { background:var(--accent); color:var(--accent-ink); }
+.ref-review-decision p { overflow-wrap:anywhere; }
+@media(max-width:850px) { .ref-review-body { grid-template-columns:minmax(0,1fr); gap:12px; } }
+.shot-image-analysis{margin:1rem 0;padding:1rem;border:1px solid var(--border,#c6c9d0);border-radius:10px}
+.shot-image-analysis>h4{margin:0 0 .7rem}.shot-image-analysis>details,.shot-image-picker,.import-source-image{margin:.75rem 0}
+.shot-image-analysis>.muted{margin:.45rem 0}.shot-image-result>summary{overflow-wrap:anywhere}.shot-image-result[open]>p,.shot-image-result[open]>.material-plan-list{margin:.65rem 0}
+.shot-image-compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));gap:.7rem}
+.shot-image-compare figure,.imported-image{margin:.5rem 0;min-width:0}
+.shot-image-compare img,.shot-image-compare svg,.imported-image img{display:block;width:100%;height:auto;max-height:230px;object-fit:contain;background:#141820}
+.shot-image-picker figcaption{font-size:.85em;margin-top:.35rem}
+.import-source-image label{display:block;margin:.4rem 0}.import-source-image input:not([type=checkbox]){width:100%}
+
+.reference-image-gallery { margin:16px 0; min-width:0; }
+.explanation-plan { margin:16px 0; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--surface-raised); overflow-wrap:anywhere; }
+.explanation-plan h3 { margin:0 0 8px; font-size:1rem; }
+.explanation-plan p { margin:8px 0; line-height:1.6; }
+.explanation-plan summary { padding:12px 0; cursor:pointer; }
+.explanation-plan li { margin:16px 0; }
+.explanation-plan button { min-height:44px; }
+.reference-image-gallery h4 { margin:16px 0 8px; font-size:1rem; }
+.reference-image-gallery details { margin-top:12px; }
+.reference-image-gallery summary { cursor:pointer; padding:8px 0; }
+.reference-image-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,172px),1fr)); gap:12px; }
+button.reference-image-card { display:grid; align-content:start; justify-items:stretch; min-width:0; padding:0; overflow:hidden; background:var(--surface-raised); color:var(--ink); text-align:left; }
+.reference-image-card img { display:block; width:100%; aspect-ratio:16/10; object-fit:contain; background:var(--canvas); }
+.reference-image-card > span { display:grid; gap:2px; padding:8px 10px; white-space:normal; overflow-wrap:anywhere; }
+.reference-image-card strong { font-size:.88rem; font-weight:600; }
+.reference-image-card small,.reference-image-preview small { color:var(--muted); }
+.reference-image-card:focus-visible,.reference-image-preview button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.reference-image-preview { width:fit-content; max-width:calc(100vw - 32px); max-height:calc(100dvh - 32px); padding:16px; border:1px solid var(--line); border-radius:12px; color:var(--ink); background:var(--surface); overflow:auto; }
+.reference-image-preview::backdrop { background:rgba(0,0,0,.76); }
+.reference-image-preview header { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:12px; }
+.reference-image-preview header div { min-width:0; overflow-wrap:anywhere; }
+.reference-image-preview small { display:block; }
+.reference-image-preview button { flex:none; min-height:44px; }
+.reference-image-preview img { display:block; width:auto; height:auto; max-width:100%; max-height:calc(100dvh - 150px); margin:auto; object-fit:contain; background:var(--canvas); }
+.sample-player-review .reference-image-gallery { margin-top:0; }
+@media(max-width:600px) {
+  .reference-image-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cueframe-speech",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node speech-server.mjs",
+    "mcp:speech": "node mcp/doubao-speech.mjs",
+    "test": "node --test tests/doubao-speech.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "3.25.76"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

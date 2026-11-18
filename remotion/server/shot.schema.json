@@ -1,0 +1,88 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["shots"],
+  "properties": {
+    "shots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "zh": {
+            "type": "string"
+          },
+          "en": {
+            "type": "string"
+          },
+          "visual": {
+            "type": "string"
+          },
+          "continuity": {"type":"object","additionalProperties":false,"properties":{"subject":{"type":"string"},"path":{"type":"string"},"camera":{"type":"string"},"handoff":{"type":"string"}},"required":["subject","path","camera","handoff"]},
+          "graphic": {
+            "type": "string",
+            "enum": ["产品特写", "步骤图", "对照图", "月相示意"]
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "annotations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "text": {"type": "string"},
+                "from": {"type": "number"},
+                "until": {"type": "number"},
+                "x": {"type": "number"},
+                "y": {"type": "number"}
+              },
+              "required": ["text", "from", "until", "x", "y"]
+            }
+          },
+          "beats": { "type": "array", "items": { "type": "string" } },
+          "seconds": {
+            "type": "number"
+          },
+          "assetIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "claimIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "purpose",
+          "zh",
+          "en",
+          "visual",
+          "continuity",
+          "graphic",
+          "labels",
+          "annotations",
+          "beats",
+          "seconds",
+          "assetIds",
+          "claimIds"
+        ]
+      }
+    }
+  }
+}

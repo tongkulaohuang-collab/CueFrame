@@ -1,0 +1,1 @@
+{"type":"object","additionalProperties":false,"required":["cause","steps","needsUser"],"properties":{"cause":{"type":"string"},"steps":{"type":"array","items":{"type":"string"}},"needsUser":{"type":"string"}}}
